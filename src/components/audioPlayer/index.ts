@@ -81,6 +81,7 @@ class AudioPlayer {
       this.togglePlayButton.setAttribute("class", "player__toggle-play-button");
       this.isStarted = false;
       this.isPlaying = false;
+      this.dataArray = null;
       this.cancelAudioPlayerMainLoop();
     });
 

@@ -14,8 +14,9 @@ const initAudioPlayerMainLoop = () => {
 };
 
 document.body.appendChild(
-  audioPlayer.render(initAudioPlayerMainLoop, () =>
+  audioPlayer.render(initAudioPlayerMainLoop, () => {
+    audioVisalizer.drawChain(audioPlayer.returnCurrentData());
     window.cancelAnimationFrame(requestId)
-  )
+  })
 );
 document.body.appendChild(audioVisalizer.render());
